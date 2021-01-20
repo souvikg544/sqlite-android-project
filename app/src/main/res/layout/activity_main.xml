@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grocery1"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edittext_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="#DCD179"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edittext_unit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:inputType="text"
+        android:hint="Unit"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:textColor="#DCD179"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textview_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_name"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textColor="#E4E195"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button_decrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textview_amount"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_toStartOf="@+id/textview_amount"
+        android:layout_toLeftOf="@+id/textview_amount"
+        android:text="-"
+        app:backgroundTint="#F10404" />
+
+    <Button
+        android:id="@+id/button_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textview_amount"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="-149dp"
+        android:layout_marginRight="-149dp"
+        android:layout_toStartOf="@+id/textview_amount"
+        android:layout_toLeftOf="@+id/textview_amount"
+        android:layout_toEndOf="@+id/textview_amount"
+        android:layout_toRightOf="@+id/textview_amount"
+        android:text="+"
+        app:backgroundTint="#7FD021" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="140dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginRight="154dp"
+        android:text="ADD"
+        android:textSize="10sp"
+        app:backgroundTint="#220652" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_add"
+        android:scrollbars="vertical"
+        android:soundEffectsEnabled="true" />
+
+
+</RelativeLayout>
